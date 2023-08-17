@@ -8,7 +8,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 //import './styles.css';
-
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
 
@@ -17,6 +16,7 @@ const Slider = () => {
 
   return (
     <>
+    
       <Swiper 
         slidesPerView={1}
         spaceBetween={30}
@@ -39,8 +39,13 @@ const Slider = () => {
        
         </div> 
       </Swiper>
+      
     </>
   );
 }
 
 export default Slider;
+
+
+
+

@@ -9,7 +9,7 @@ const Login = () => {
   const[email, setEmail] = useState("");
   const[password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const{isFetching, error,status} = useSelector((state) =>state.login);
+  const{isFetching, error,status} = useSelector((state) =>state.user);
   const navigate = useNavigate();
 
    const user = JSON.parse(localStorage.getItem("persist:root"))?.user;
@@ -23,20 +23,18 @@ const Login = () => {
     };
     
     // Call the loginhandler and await the response
-     await loginhandler(dispatch, user);
+    const resp = await loginhandler(dispatch, user);
+    //  navigate('/')
+    console.log(resp);
     
   };
-  useEffect(()=>{
-    if(status){
+
+  useEffect(() => {
+    console.log(currentUser)
+    if (currentUser !== null) {
       navigate('/')
     }
-
-  },[status])
-  // useEffect(() => {
-  //   if (currentUser !== null) {
-  //     navigate('/')
-  //   }
-  // }, [currentUser]);
+  }, [currentUser, navigate]);
 
   return (
     <div className="w-screen h-screen bg-cover  bg-gradient-to-r  from-cyan-200 to-fuchsia-200 flex items-center justify-center loginContainer">

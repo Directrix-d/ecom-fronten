@@ -36,7 +36,7 @@ const FeaturedProducts = ({ type }) => {
         </p>
       </div>
 
-      <div className='bottom flex justify-center gap-[50px]'>
+      <div className='bottom flex flex-wrap justify-center gap-[50px] '>
         {productData
           ?.filter(product => product.type === type)
           .slice(0, 5) // Limit to 5 cards per type
@@ -48,6 +48,9 @@ const FeaturedProducts = ({ type }) => {
             </div>
           ))}
       </div>
+
+
+      
     </div>
   );
 };

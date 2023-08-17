@@ -21,13 +21,6 @@ import Checkout from "./pages/checkOut/Checkout"
 
 
 
-function Services() {
-  return <h1>Discover our Services!</h1>;
-}
-
-function Contact() {
-  return <h1>Contact us at ECOM!</h1>;
-}
 
 function App() {
   return (
@@ -47,7 +40,7 @@ function App() {
 
             
           </Routes>
-          {/* <Footer/> */}
+          <Footer/>
           
         </div>
       </div>

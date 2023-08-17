@@ -2,12 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const userSlice = createSlice({
-    name: "login",
+    name: "user",
     initialState: {
         currentUser: null,
         isFetching: false,
         error: false,
-        status:false
+        
     },
     reducers: {
         loginStart: (state) => {
@@ -16,7 +16,7 @@ const userSlice = createSlice({
         loginSuccess: (state, action) => {
             state.isFetching = false;
             state.currentUser = action.payload;
-            state.status = true;
+           
         },
         loginFailure: (state) => {
             state.isFetching = false;
@@ -32,8 +32,8 @@ export const { loginStart, loginSuccess, loginFailure, logout } = userSlice.acti
 export default userSlice.reducer;
 
 export const loginhandler = async (dispatch, user) => {
+    dispatch(loginStart()); // Dispatch the loginStart action before making the request
     try {
-        dispatch(loginStart()); // Dispatch the loginStart action before making the request
 
         const res = await axios.post("http://localhost:3300/auth/login", user);
 
