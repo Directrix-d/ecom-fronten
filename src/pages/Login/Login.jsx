@@ -14,7 +14,7 @@ const Login = () => {
 
    const user = JSON.parse(localStorage.getItem("persist:root"))?.user;
   const currentUser = user && JSON.parse(user).currentUser; 
-  const [status, setStatus] = useState(false)
+  //const [status, setStatus] = useState(false)
 
   const handleClick =  async (e) => {
     e.preventDefault();
@@ -25,38 +25,38 @@ const Login = () => {
     
     // Call the loginhandler and await the response
      await loginhandler(dispatch, user)
-     .then(() =>setStatus(true))
+    
 
    
     
   };
-   console.log(status)
+   
   useEffect(() => {
-    if (status) {
+    if (currentUser !== null) {
       navigate('/')
     }
-  }, [status]);
+  }, [currentUser]);
   
   return (
     <div className="w-screen h-screen bg-cover  bg-gradient-to-r  from-cyan-200 to-fuchsia-200 flex items-center justify-center loginContainer">
     <div className="w-3/4 md:w-3/12 bg-gradient-to-bl from-white to-cyan-300 p-5 shadow-md ">
       <h1 className="text-2xl font-light">SIGN IN</h1>
-      <form className="flex flex-col">
+      <form className="flex flex-col" onSubmit={handleClick}>
         <input
           className="flex-[1] min-w-[40%] mx-0 my-2.5 p-2.5 border-black border-[1px]"
-          placeholder="Email" type='email' onChange={(e)=>setEmail(e.target.value)}
+          placeholder="Email" type='email' required onChange={(e)=>setEmail(e.target.value)}
       
         />
         <input
           className="flex-[1] min-w-[40%] mx-0 my-2.5 p-2.5 border-black border-[1px]"
           placeholder="Password"
-          type="password"
+          type="password" required
           onChange={(e)=>setPassword(e.target.value)}
         
         />
         <button
           className="w-2/5 bg-[teal] text-[white] cursor-pointer mb-2.5 px-5 py-[15px] border-[none]  self-end"
-           onClick={handleClick}
+           
         >
           LOGIN
         </button>
