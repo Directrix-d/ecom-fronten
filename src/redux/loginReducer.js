@@ -35,7 +35,7 @@ export const loginhandler = async (dispatch, user) => {
     dispatch(loginStart()); // Dispatch the loginStart action before making the request
     try {
 
-        const res = await axios.post("http://localhost:3300/auth/login", user);
+        const res = await axios.post("https://thankful-galoshes-colt.cyclic.cloud/auth/login", user);
 
         dispatch(loginSuccess(res.data)); // Dispatch the loginSuccess action with the response data
     } catch (err) {

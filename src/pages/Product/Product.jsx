@@ -22,7 +22,7 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:3300/product/find/${id}`);
+        const res = await axios.get(`https://thankful-galoshes-colt.cyclic.cloud/product/find/${id}`);
         setProduct(res.data);
       } catch (err) {
         console.log("Error in getting Products by id", err);

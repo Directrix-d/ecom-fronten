@@ -9,13 +9,14 @@ const Login = () => {
   const[email, setEmail] = useState("");
   const[password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const{isFetching, error,status} = useSelector((state) =>state.user);
+  const{isFetching, error} = useSelector((state) =>state.user);
   const navigate = useNavigate();
 
    const user = JSON.parse(localStorage.getItem("persist:root"))?.user;
-  const currentUser = user && JSON.parse(user).currentUser;
+  const currentUser = user && JSON.parse(user).currentUser; 
+  const [status, setStatus] = useState(false)
 
-  const handleClick = async (e) => {
+  const handleClick =  async (e) => {
     e.preventDefault();
     const user = {
       email: email,
@@ -23,19 +24,19 @@ const Login = () => {
     };
     
     // Call the loginhandler and await the response
-    const resp = await loginhandler(dispatch, user);
-    //  navigate('/')
-    console.log(resp);
+     await loginhandler(dispatch, user)
+     .then(() =>setStatus(true))
+
+   
     
   };
-
+   console.log(status)
   useEffect(() => {
-    console.log(currentUser)
-    if (currentUser !== null) {
+    if (status) {
       navigate('/')
     }
-  }, [currentUser, navigate]);
-
+  }, [status]);
+  
   return (
     <div className="w-screen h-screen bg-cover  bg-gradient-to-r  from-cyan-200 to-fuchsia-200 flex items-center justify-center loginContainer">
     <div className="w-3/4 md:w-3/12 bg-gradient-to-bl from-white to-cyan-300 p-5 shadow-md ">

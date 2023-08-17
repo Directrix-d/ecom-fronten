@@ -30,7 +30,7 @@ const Checkout = () => {
     //   return navigate('/login'); // Redirect to login page
     // } else {
       try {
-        const resp = await axios.post("http://localhost:3300/checkout/payment", {
+        const resp = await axios.post("https://thankful-galoshes-colt.cyclic.cloud/checkout/payment", {
           products,
         });
         

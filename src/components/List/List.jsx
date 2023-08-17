@@ -10,8 +10,8 @@ const List = ({ categoryid, filters, sort }) => {
         try {
           const res = await axios.get(
             categoryid
-              ? `http://localhost:3300/product?category=${categoryid}`
-              : "http://localhost:3300/product?new=true"
+              ? `https://thankful-galoshes-colt.cyclic.cloud/product?category=${categoryid}`
+              : "https://thankful-galoshes-colt.cyclic.cloud/product?new=true"
           );
           setProducts(res.data);
         } catch (err) {}

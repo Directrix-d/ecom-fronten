@@ -17,7 +17,7 @@ const Register = () => {
     }
  
 
-  axios.post("http://localhost:3300/auth/register",userData)
+  axios.post("https://thankful-galoshes-colt.cyclic.cloud/auth/register",userData)
   .then((res)=>console.log(res.data))
   .catch((error)=>console.log(error))
   .then(() =>setStatus(true))
@@ -27,8 +27,7 @@ const Register = () => {
  useEffect(() => {
   if (status) {
     setTimeout(() => {
-     setStatus(false); // Reset the redirect state to prevent infinite loop
-      // Redirect to login page after 5 seconds
+     setStatus(false); 
       navigate("/login");
     }, 1000); 
   }

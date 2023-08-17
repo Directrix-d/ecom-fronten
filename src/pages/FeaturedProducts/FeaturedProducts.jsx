@@ -8,7 +8,7 @@ const FeaturedProducts = ({ type }) => {
 
   const getProductData = async () => {
     try {
-      const res = await axios.get('http://localhost:3300/product');
+      const res = await axios.get('https://thankful-galoshes-colt.cyclic.cloud/product');
       setProductData(res.data);
       setLoading(false);
     } catch (err) {

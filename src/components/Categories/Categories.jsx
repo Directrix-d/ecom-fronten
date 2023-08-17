@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Categories = () => {
   return (
     <>
-      <div className="hidden md:block" id="accessories">
+      <div className="hidden md:block" >
         <div className="mb-5 md:text-[22px] font-medium uppercase md:p-3 px-0  after:block after:w-[70px] after:h-[3px] after:bg-[#2dafe2] after:mt-[5px]">
           Categories to choose
         </div>
@@ -16,11 +16,8 @@ const Categories = () => {
                 alt=""
                 className=" w-full h-full object-cover"
               />
-              <Link
-                href={{
-                  pathname: "/products/[category]",
-                  query: { category: "Perfume" },
-                }}
+              <Link to='/products/accessories'
+               
               >
                 <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-white text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                   PERFUMES
@@ -33,11 +30,7 @@ const Categories = () => {
                 alt=""
                 className=" w-full h-full object-cover"
               />
-              <Link
-                href={{
-                  pathname: "/products/[category]",
-                  query: { category: "Handbag" },
-                }}
+              <Link to='/products/accessories'
               >
                 <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[white] text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                   HANDBAGS
@@ -53,11 +46,7 @@ const Categories = () => {
                   alt=""
                   className=" w-full h-full object-cover"
                 />
-                <Link
-                  href={{
-                    pathname: "/products/[category]",
-                    query: { category: "Backpack" },
-                  }}
+                <Link to='/products/accessories'
                 >
                   <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[white] text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                     BACKPACKS
@@ -74,11 +63,8 @@ const Categories = () => {
                   alt=""
                   className=" w-full h-full object-cover"
                 />
-                <Link
-                  href={{
-                    pathname: "/products/[category]",
-                    query: { category: "Sunglass" },
-                  }}
+                <Link to='/products/accessories'
+                
                 >
                   <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[white] text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                     SUNGLASSES
@@ -91,11 +77,7 @@ const Categories = () => {
                   alt=""
                   className=" w-full h-full object-cover"
                 />
-                <Link
-                  href={{
-                    pathname: "/products/[category]",
-                    query: { category: "Watch" },
-                  }}
+                <Link  to='/products/accessories'
                 >
                   <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[white] text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                     WATCHES
@@ -111,10 +93,8 @@ const Categories = () => {
                 className=" w-full h-full object-cover"
               />
               <Link
-                href={{
-                  pathname: "/products/[category]",
-                  query: { category: "Shoes" },
-                }}
+                    to='/products/accessories'
+                   
               >
                 <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[white] text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                   SHOES
