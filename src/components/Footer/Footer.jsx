@@ -5,6 +5,7 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import ApartmentIcon from "@mui/icons-material/Apartment";
+import svg from "../../logo.svg"
 
 const Footer = () => {
   return (
@@ -12,14 +13,18 @@ const Footer = () => {
       <div className="flex flex-1 flex-col p-5">
         <h1 className="mb-[30px] text-lg  text-[#2f2e2e] font-semibold">
           <div className="ml-[2%] ">
-            <h1 className="w-[90px] h-[20px]" > Ecom</h1>
+            <div className="flex items-center">
+               <div>
+
+            <img src = {svg}/>
+               </div>
+            <div className="w-[90px] h-[20px] ml-2" > Ecom</div>
+            </div>
           </div>
         </h1>
         <p className=" mt-1 mb-4 text-[gray]">
-          You can spruce up your style with the right clothing.<b>Trendz</b> is
-          home to some of the best cloths for men, for kids, and for women.
-          Brands such as Wrangler, Levi’s, Lee, W, Peter England, and U.S. Polo
-          Assn have a wide selection of chinos, jeans, shorts, and more.
+         
+Welcome to our <b>ESHOP</b> website, your ultimate online shopping destination! Experience a seamless blend of convenience and variety as you explore a diverse range of products right at your fingertips.
         </p>
         <div className="flex">
           <div className="w-10 h-10 text-[white] flex items-center justify-center mr-5 rounded-[50%] bg-[#3B5999]">

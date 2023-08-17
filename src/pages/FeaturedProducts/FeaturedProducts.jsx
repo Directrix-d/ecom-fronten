@@ -26,13 +26,7 @@ const FeaturedProducts = ({ type }) => {
       <div className='top flex items-center justify-between mb-[50px]'>
         <h1 className='flex-[2] capitalize'>{type} Products</h1>
         <p className='flex-[3] text-gray-700'>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
-          magnam culpa? Possimus assumenda pariatur sapiente quaerat sequi sint
-          facilis. Asperiores ratione ullam ad magni vel molestiae veniam
-          doloribus, quis illum? Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Incidunt beatae autem illo numquam veniam, harum
-          corrupti ex iusto, alias eaque nisi iste explicabo consectetur!
-          Suscipit assumenda possimus soluta vel earum.
+        The latest in fashion at Eshop, where popular and trending clothes come to life. Our curated collection showcases the hottest styles that are making waves in the fashion world right now. From chic streetwear to elegant evening attire, we've got it all. Elevate your wardrobe with our handpicked selection of clothing that's not only stylish but also reflective of the current fashion zeitgeist.
         </p>
       </div>
 
