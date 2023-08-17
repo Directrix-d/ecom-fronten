@@ -26,9 +26,9 @@ const Checkout = () => {
   console.log(currentUser);
 
   const handlePayment = async () => {
-    // if (!currentUser) {
-    //   return navigate('/login'); // Redirect to login page
-    // } else {
+    if (!currentUser) {
+      return navigate('/login'); // Redirect to login page
+    } else {
       try {
         const resp = await axios.post("https://thankful-galoshes-colt.cyclic.cloud/checkout/payment", {
           products,
@@ -43,7 +43,7 @@ const Checkout = () => {
         console.log(err);
       }
       
-  //  }
+   }
   };
   return (
     <div>

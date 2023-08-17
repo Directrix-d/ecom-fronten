@@ -18,13 +18,13 @@ const Footer = () => {
 
             <img src = {svg}/>
                </div>
-            <div className="w-[90px] h-[20px] ml-2" > Ecom</div>
+            <div className="w-[90px] h-[20px] ml-2" >E-SHOP</div>
             </div>
           </div>
         </h1>
         <p className=" mt-1 mb-4 text-[gray]">
          
-Welcome to our <b>ESHOP</b> website, your ultimate online shopping destination! Experience a seamless blend of convenience and variety as you explore a diverse range of products right at your fingertips.
+Welcome to our <b>E-SHOP</b> website, your ultimate online shopping destination! Experience a seamless blend of convenience and variety as you explore a diverse range of products right at your fingertips.
         </p>
         <div className="flex">
           <div className="w-10 h-10 text-[white] flex items-center justify-center mr-5 rounded-[50%] bg-[#3B5999]">
@@ -68,7 +68,7 @@ Welcome to our <b>ESHOP</b> website, your ultimate online shopping destination! 
               <div className="flex  my-2 items-center">
                 <ApartmentIcon style={{ marginRight: "10px", color: "gray" }} />
                 <div className="text-[gray]">
-                  621/B, 12th Main, Hal II Stage, Indranagar, Bengaluru
+                  621/B,Sample Sample, North Delhi - 111100
                 </div>
               </div>
               <div className="flex my-2 items-center">
@@ -76,12 +76,12 @@ Welcome to our <b>ESHOP</b> website, your ultimate online shopping destination! 
                   style={{ marginRight: "10px", color: "gray" }}
                 />
                 <div className="text-[gray]">
-                  <span>+91 8882834719</span>
+                  <span>+91 9205290054</span>
                 </div>
               </div>
               <div className="flex  my-2 items-center">
                 <EmailIcon style={{ marginRight: "10px", color: "gray" }} />
-                <div className="text-[gray]">contact@Trendz</div>
+                <div className="text-[gray]">contact@E-SHOP</div>
               </div>
             </div>
           </div>

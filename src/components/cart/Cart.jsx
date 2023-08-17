@@ -50,7 +50,7 @@ const Cart = () => {
     
     <div className="total flex justify-between font-medium text-lg mb-5">
       <span>SUBTOTAL</span>
-      <span>₹500</span>
+      <span>₹{totalPrice()}</span>
     </div>
     {/* <Link href={{ pathname: "/cart" }}> */}
     {/* <Link to='/checkout' element ={<Checkout/>} > */}

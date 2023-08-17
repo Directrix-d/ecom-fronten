@@ -4,22 +4,22 @@ import { Link } from 'react-router-dom'
 const Categories = () => {
   return (
     <>
-      <div className="hidden md:block" >
+\      <div className="hidden md:block" id="Categories">
         <div className="mb-5 md:text-[22px] font-medium uppercase md:p-3 px-0  after:block after:w-[70px] after:h-[3px] after:bg-[#2dafe2] after:mt-[5px]">
-          Categories to choose
+          Accessories to choose
         </div>
         <div className="flex h-[80vh] gap-2.5 m-2.5">
           <div className="flex-[1] flex flex-col gap-2.5">
-            <div className="flex-[1] flex  relative overflow-hidden">
+            <div className="flex-[1] flex gap-2.5 relative overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1544468266-6a8948003cd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80"
                 alt=""
                 className=" w-full h-full object-cover"
               />
-              <Link to='/products/accessories'
-               
+              <Link
+                 to = "/products/perfumes"
               >
-                <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-white text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
+                <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[black] text-[white] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                   PERFUMES
                 </button>
               </Link>
@@ -30,9 +30,10 @@ const Categories = () => {
                 alt=""
                 className=" w-full h-full object-cover"
               />
-              <Link to='/products/accessories'
+              <Link
+                to = "products/handbags"
               >
-                <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[white] text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
+                <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[black] text-[white] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                   HANDBAGS
                 </button>
               </Link>
@@ -46,9 +47,10 @@ const Categories = () => {
                   alt=""
                   className=" w-full h-full object-cover"
                 />
-                <Link to='/products/accessories'
+                <Link
+                  to = "/products/backpack"
                 >
-                  <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[white] text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
+                  <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[black] text-[white] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                     BACKPACKS
                   </button>
                 </Link>
@@ -63,10 +65,10 @@ const Categories = () => {
                   alt=""
                   className=" w-full h-full object-cover"
                 />
-                <Link to='/products/accessories'
-                
+                <Link
+                      to = '/products/specs'
                 >
-                  <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[white] text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
+                  <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[black] text-[white] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                     SUNGLASSES
                   </button>
                 </Link>
@@ -77,9 +79,10 @@ const Categories = () => {
                   alt=""
                   className=" w-full h-full object-cover"
                 />
-                <Link  to='/products/accessories'
+                <Link
+                  to = '/products/watch'
                 >
-                  <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[white] text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
+                  <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[black] text-[white] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                     WATCHES
                   </button>
                 </Link>
@@ -93,10 +96,9 @@ const Categories = () => {
                 className=" w-full h-full object-cover"
               />
               <Link
-                    to='/products/accessories'
-                   
+                 to = '/products/shoes'
               >
-                <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[white] text-[black] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
+                <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[black] text-[white] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
                   SHOES
                 </button>
               </Link>
@@ -104,7 +106,76 @@ const Categories = () => {
           </div>
         </div>
       </div>
-      
+      <div className="block md:hidden">
+        <div className="mb-5 text-lg font-medium uppercase px-3  after:block after:w-[70px] after:h-[3px] after:bg-[#2dafe2] after:mt-[5px]">
+          Accessories to choose
+        </div>
+        <div className="flex h-[80vh] gap-2.5 m-2.5">
+          <div className="flex-[1] flex flex-col gap-2.5">
+            <div className="flex-[1] flex gap-2.5 relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1544468266-6a8948003cd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80"
+                alt=""
+                className=" w-full h-full object-cover"
+              />
+              <Link
+               to = "/products/perfumes"
+              >
+                <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[black] text-[white] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
+                  PERFUMES
+                </button>
+              </Link>
+            </div>
+            <div className="flex-[1] flex gap-2.5 relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1583623733237-4d5764a9dc82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt=""
+                className=" w-full h-full object-cover"
+              />
+              <Link
+                to = "products/handbags"
+              >
+                <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[black] text-[white] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
+                  HANDBAGS
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="flex-[1] flex flex-col gap-2.5">
+            <div className="flex-[1] flex gap-2.5 relative overflow-hidden">
+              <div className="flex-[1] flex gap-2.5 relative overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1617265859824-46910d1ad447?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=841&q=80"
+                  alt=""
+                  className=" w-full h-full object-cover"
+                />
+                <Link
+                   to = "/products/watch"
+                >
+                  <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[black] text-[white] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
+                    WATCHES
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex-[1] flex gap-2.5 relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1556906781-9a412961c28c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt=""
+                className=" w-full h-full object-cover"
+              />
+              <Link
+                 to = "/products/shoes"
+              >
+                <button className="absolute min-w-[100px] w-fit h-[50px] cursor-pointer bg-[black] text-[white] uppercase font-semibold m-auto p-2.5 border-[none] inset-0">
+                  SHOES
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
 
   )
