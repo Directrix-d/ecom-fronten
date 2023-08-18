@@ -10,6 +10,11 @@ const Cart = () => {
   const cart  = useSelector((state) =>state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  function handleCheckout(){
+    navigate('/checkout')
+    window.location.reload();
+
+  }
 
   const totalPrice = () => {
     let total = 0;
@@ -54,7 +59,7 @@ const Cart = () => {
     </div>
     {/* <Link href={{ pathname: "/cart" }}> */}
     {/* <Link to='/checkout' element ={<Checkout/>} > */}
-      <button onClick={()=> navigate('/checkout')} className="w-full bg-[black] text-[white] font-semibold p-2.5 my-2 flex items-center justify-center gap-5">
+      <button onClick={ handleCheckout} className="w-full bg-[black] text-[white] font-semibold p-2.5 my-2 flex items-center justify-center gap-5">
         CHECKOUT
       </button>
    {/* </Link> */}

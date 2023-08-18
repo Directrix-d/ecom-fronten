@@ -25,7 +25,6 @@ const NavBar = () => {
   const [isLoading, setLoading] = useState(false);
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
-  const [isSearchBoxOpen, setSearchBoxOpen] = useState(true);
 
   const user = JSON.parse(localStorage.getItem("persist:root"))?.user;
   const currentUser = user && JSON.parse(user).currentUser;
@@ -49,9 +48,9 @@ const NavBar = () => {
     const res = await axios.get(
       `https://thankful-galoshes-colt.cyclic.cloud/product?search=${qsearch}`
     );
-    console.log(res.data);
+    
     setFilteredData(res.data);
-    setSearchBoxOpen(false);
+  
   };
 
   useEffect(() => {
@@ -71,6 +70,8 @@ const NavBar = () => {
   const clearInput = () => {
     setFilteredData([]);
     setWordEntered("");
+   
+    
   };
 
   const logoutHandler = () => {
@@ -136,7 +137,7 @@ const NavBar = () => {
                     <Link
                     to = {`/Product/${value._id}`}
                     >
-                      <div className=" bg-[#FFFCF7] border-t-2 border-[#3b3a3a] px-2 py-2 flex hover:text-[#C2D8B9] hover:text-[#26a9e2] ">
+                      <div  onClick={clearInput} className=" bg-[#FFFCF7] border-t-2 border-[#3b3a3a] px-2 py-2 flex ">
                         <div className="max-w-[20%] ">
                           <img
                             src={value.img1}
