@@ -23,20 +23,16 @@ const Login = () => {
       password: password,
     };
     
-    // Call the loginhandler and await the response
+     try{
      await loginhandler(dispatch, user)
-    
-
-   
-    
-  };
-   
-  useEffect(() => {
-    if (currentUser !== null) {
-      navigate('/')
+     navigate('/')
+     window.location.reload();
     }
-  }, [currentUser]);
-  
+     catch (error) {
+      console.error('Login failed:', error);
+  };
+}
+
   return (
     <div className="w-screen h-screen bg-cover  bg-gradient-to-r  from-cyan-200 to-fuchsia-200 flex items-center justify-center loginContainer">
     <div className="w-3/4 md:w-3/12 bg-gradient-to-bl from-white to-cyan-300 p-5 shadow-md ">
