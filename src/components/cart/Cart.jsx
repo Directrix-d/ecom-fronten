@@ -10,10 +10,18 @@ const Cart = () => {
   const cart  = useSelector((state) =>state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  function handleCheckout(){
-    navigate('/checkout')
-    window.location.reload();
+  // function handleCheckout(){
+  //   navigate('/checkout')
+  //   window.location.reload();
 
+  // }
+  function handleCheckout() {
+    if (cart.products.length > 0) {
+      navigate('/checkout');
+      window.location.reload();
+    } else {
+      alert('Cart is empty. Add items to your cart before proceeding to checkout.');
+    }
   }
 
   const totalPrice = () => {
